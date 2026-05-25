@@ -2,9 +2,7 @@ package org.zalando.fauxpas;
 
 import lombok.SneakyThrows;
 import org.apiguardian.api.API;
-
 import java.util.function.Predicate;
-
 import static org.apiguardian.api.API.Status.STABLE;
 
 @API(status = STABLE)
@@ -16,7 +14,6 @@ public interface ThrowingPredicate<T, X extends Throwable> extends Predicate<T> 
     @Override
     @SneakyThrows
     default boolean test(final T t) {
-        return tryTest(t);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

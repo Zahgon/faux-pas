@@ -2,7 +2,6 @@ package org.zalando.fauxpas;
 
 import lombok.SneakyThrows;
 import org.apiguardian.api.API;
-
 import static org.apiguardian.api.API.Status.STABLE;
 
 @API(status = STABLE)
@@ -14,7 +13,6 @@ public interface ThrowingRunnable<X extends Throwable> extends Runnable {
     @Override
     @SneakyThrows
     default void run() {
-        tryRun();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

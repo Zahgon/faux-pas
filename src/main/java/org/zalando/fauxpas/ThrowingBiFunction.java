@@ -2,9 +2,7 @@ package org.zalando.fauxpas;
 
 import lombok.SneakyThrows;
 import org.apiguardian.api.API;
-
 import java.util.function.BiFunction;
-
 import static org.apiguardian.api.API.Status.STABLE;
 
 @API(status = STABLE)
@@ -16,7 +14,6 @@ public interface ThrowingBiFunction<T, U, R, X extends Throwable> extends BiFunc
     @Override
     @SneakyThrows
     default R apply(final T t, final U u) {
-        return tryApply(t, u);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

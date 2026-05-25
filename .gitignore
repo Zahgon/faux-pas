@@ -7,3 +7,8 @@ target/
 /.mvn/wrapper/*.jar
 
 *.log
+
+.aider*
+logs/
+.commit0_scripts/
+.github/workflows/
